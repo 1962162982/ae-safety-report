@@ -1,0 +1,524 @@
+﻿NOTE: “PROCEDURE PRINTTO”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.01 秒
+      
+
+4293  
+4294  proc datasets library=work kill nodetails nolist;
+NOTE: 正在写入 HTML Body（主体）文件: sashtml8.htm
+NOTE: 正在删除 WORK.AE (memtype=DATA)。
+NOTE: 正在删除 WORK.AE_ADSL (memtype=DATA)。
+NOTE: 正在删除 WORK.AE_CHECK_TEMP (memtype=DATA)。
+NOTE: 正在删除 WORK.AE_CLEAN (memtype=DATA)。
+NOTE: 正在删除 WORK.AE_TRT (memtype=DATA)。
+NOTE: 正在删除 WORK.CHECK_TRT (memtype=DATA)。
+NOTE: 正在删除 WORK.CHISQ_AE (memtype=DATA)。
+NOTE: 正在删除 WORK.DM (memtype=DATA)。
+NOTE: 正在删除 WORK.DM_TRT (memtype=DATA)。
+NOTE: 正在删除 WORK.REPORT1 (memtype=DATA)。
+NOTE: 正在删除 WORK.REPORT2 (memtype=DATA)。
+NOTE: 正在删除 WORK.REPORT3 (memtype=DATA)。
+NOTE: 正在删除 WORK.SASMACR (memtype=CATALOG)。
+NOTE: 无法删除文件 WORK.SASMACR (memtype=CATALOG)，因为它正在使用中。
+NOTE: 正在删除 WORK.TEMP1_DUPS (memtype=DATA)。
+NOTE: 正在删除 WORK.TEMP1_LACK (memtype=DATA)。
+NOTE: 正在删除 WORK.TEMP1_NODUP (memtype=DATA)。
+NOTE: 正在删除 WORK.TEMP2_DUPS (memtype=DATA)。
+NOTE: 正在删除 WORK.TEMP2_NODUP (memtype=DATA)。
+NOTE: 正在删除 WORK.TEMP_CLEAN (memtype=DATA)。
+NOTE: 正在删除 WORK.TEMP_REPORT2 (memtype=DATA)。
+NOTE: 正在删除 WORK.TEMP_REPORT3 (memtype=DATA)。
+4295  run;
+
+4296  quit;
+
+NOTE: “PROCEDURE DATASETS”所用时间（总处理时间）:
+      实际时间          0.56 秒
+      CPU 时间          0.46 秒
+      
+
+4297  
+4298  
+4299  %put NOTE: ================================;
+NOTE: ================================
+4300  %put NOTE: 项目开始,数据读取中;
+NOTE: 项目开始,数据读取中
+4301  %put NOTE: ================================;
+NOTE: ================================
+4302  *读取宏文件*;
+4303  %include 'E:\sasdata\ae-safety-report\code\1_import.sas';
+4312  %include 'E:\sasdata\ae-safety-report\code\2_check.sas';
+4461  %include 'E:\sasdata\ae-safety-report\code\3_clean.sas';
+4497  %include 'E:\sasdata\ae-safety-report\code\4_merge.sas';
+4505  %include 'E:\sasdata\ae-safety-report\code\5_report1.sas';
+4523  %include 'E:\sasdata\ae-safety-report\code\6_report2.sas';
+4554  %include 'E:\sasdata\ae-safety-report\code\7_report3.sas';
+4585  %include 'E:\sasdata\ae-safety-report\code\8_trt_report.sas';
+4648  %include 'E:\sasdata\ae-safety-report\code\9_loop.sas';
+4666  %include 'E:\sasdata\ae-safety-report\code\10_chisq.sas';
+4686  
+4687  *读取数据*;
+4688  %import(file='E:\sasdata\ae-safety-report\data\ae.csv',out=ae);
+
+4689   /**********************************************************************
+4690   *   PRODUCT:   SAS
+4691   *   VERSION:   9.4
+4692   *   CREATOR:   External File Interface
+4693   *   DATE:      29SEP14
+4694   *   DESC:      Generated SAS Datastep Code
+4695   *   TEMPLATE SOURCE:  (None Specified.)
+4696   ***********************************************************************/
+4697      data WORK.AE    ;
+4698      %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+4699      infile "'E:\sasdata\ae-safety-report\data\ae.csv'" delimiter = ',' MISSOVER DSD lrecl=32767 firstobs=2 ;
+4700         informat USUBJID $4. ;
+4701         informat TRT01A $7. ;
+4702         informat AETERM $36. ;
+4703         informat AEDECOD $36. ;
+4704         informat AEBODSYS $52. ;
+4705         informat AESEV $8. ;
+4706         informat AESER $1. ;
+4707         informat AESTDTC yymmdd10. ;
+4708         informat AEENDTC yymmdd10. ;
+4709         informat AEREL $16. ;
+4710         format USUBJID $4. ;
+4711         format TRT01A $7. ;
+4712         format AETERM $36. ;
+4713         format AEDECOD $36. ;
+4714         format AEBODSYS $52. ;
+4715         format AESEV $8. ;
+4716         format AESER $1. ;
+4717         format AESTDTC yymmdd10. ;
+4718         format AEENDTC yymmdd10. ;
+4719         format AEREL $16. ;
+4720      input
+4721                  USUBJID $
+4722                  TRT01A $
+4723                  AETERM $
+4724                  AEDECOD $
+4725                  AEBODSYS $
+4726                  AESEV $
+4727                  AESER $
+4728                  AESTDTC
+4729                  AEENDTC
+4730                  AEREL $
+4731      ;
+4732      if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+4733      run;
+
+NOTE: INFILE "'E:\sasdata\ae-safety-report\data\ae.csv'" 是:
+      文件名=E:\sasdata\ae-safety-report\data\ae.csv,
+      RECFM=V,LRECL=32767,文件大小（字节）=9919,
+      上次修改时间=2026年09月29日 15时08分19秒,
+      创建时间=2026年09月22日 15时18分08秒
+
+NOTE: 从 INFILE "'E:\sasdata\ae-safety-report\data\ae.csv'" 中读取了 96 条记录。
+      最小记录长度是 19。
+      最大记录长度是 142。
+NOTE: 数据集 WORK.AE 有 96 个观测和 10 个变量。
+NOTE: “DATA 语句”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.01 秒
+      
+
+96 rows created in WORK.AE from 'E:\sasdata\ae-safety-report\data\ae.csv'.
+  
+  
+  
+NOTE: 成功创建“WORK.AE”数据集。
+NOTE: 数据集 WORK.AE 有 96 个观测和 10 个变量。
+NOTE: “PROCEDURE IMPORT”所用时间（总处理时间）:
+      实际时间          0.10 秒
+      CPU 时间          0.09 秒
+      
+
+4734  %import(file='E:\sasdata\ae-safety-report\data\dm.csv',out=dm);
+
+4735   /**********************************************************************
+4736   *   PRODUCT:   SAS
+4737   *   VERSION:   9.4
+4738   *   CREATOR:   External File Interface
+4739   *   DATE:      29SEP14
+4740   *   DESC:      Generated SAS Datastep Code
+4741   *   TEMPLATE SOURCE:  (None Specified.)
+4742   ***********************************************************************/
+4743      data WORK.DM    ;
+4744      %let _EFIERR_ = 0; /* set the ERROR detection macro variable */
+4745      infile "'E:\sasdata\ae-safety-report\data\dm.csv'" delimiter = ',' MISSOVER DSD lrecl=32767 firstobs=2 ;
+4746         informat USUBJID $4. ;
+4747         informat TRT01A $7. ;
+4748         informat AGE best32. ;
+4749         informat SEX $1. ;
+4750         informat RACE $25. ;
+4751         informat WEIGHT best32. ;
+4752         informat HEIGHT best32. ;
+4753         format USUBJID $4. ;
+4754         format TRT01A $7. ;
+4755         format AGE best12. ;
+4756         format SEX $1. ;
+4757         format RACE $25. ;
+4758         format WEIGHT best12. ;
+4759         format HEIGHT best12. ;
+4760      input
+4761                  USUBJID $
+4762                  TRT01A $
+4763                  AGE
+4764                  SEX $
+4765                  RACE $
+4766                  WEIGHT
+4767                  HEIGHT
+4768      ;
+4769      if _ERROR_ then call symputx('_EFIERR_',1);  /* set ERROR detection macro variable */
+4770      run;
+
+NOTE: INFILE "'E:\sasdata\ae-safety-report\data\dm.csv'" 是:
+      文件名=E:\sasdata\ae-safety-report\data\dm.csv,
+      RECFM=V,LRECL=32767,文件大小（字节）=2449,
+      上次修改时间=2026年09月29日 15时08分16秒,
+      创建时间=2026年09月29日 15时08分51秒
+
+NOTE: 从 INFILE "'E:\sasdata\ae-safety-report\data\dm.csv'" 中读取了 70 条记录。
+      最小记录长度是 24。
+      最大记录长度是 52。
+NOTE: 数据集 WORK.DM 有 70 个观测和 7 个变量。
+NOTE: “DATA 语句”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.01 秒
+      
+
+70 rows created in WORK.DM from 'E:\sasdata\ae-safety-report\data\dm.csv'.
+  
+  
+  
+NOTE: 成功创建“WORK.DM”数据集。
+NOTE: 数据集 WORK.DM 有 70 个观测和 7 个变量。
+NOTE: “PROCEDURE IMPORT”所用时间（总处理时间）:
+      实际时间          0.07 秒
+      CPU 时间          0.07 秒
+      
+
+4771  
+4772  *数据质量检查,display=1表示显示具体细则，=0则表示只显示结果*;
+4773  %check(dataAE=ae,dataDM=dm,display=1);
+
+NOTE: 从数据集 WORK.AE. 读取了 96 个观测
+NOTE: 1 个重复观测已删除。
+NOTE: 数据集 WORK.TEMP1_NODUP 有 95 个观测和 10 个变量。
+NOTE: 数据集 WORK.TEMP1_DUPS 有 1 个观测和 10 个变量。
+NOTE: “PROCEDURE SORT”所用时间（总处理时间）:
+      实际时间          0.01 秒
+      CPU 时间          0.01 秒
+      
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.01 秒
+      
+
+
+NOTE: 从数据集 WORK.DM. 读取了 70 个观测
+NOTE: 0 个重复观测已删除。
+NOTE: 数据集 WORK.TEMP2_NODUP 有 70 个观测和 7 个变量。
+NOTE: 数据集 WORK.TEMP2_DUPS 有 0 个观测和 7 个变量。
+NOTE: “PROCEDURE SORT”所用时间（总处理时间）:
+      实际时间          0.01 秒
+      CPU 时间          0.01 秒
+      
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+
+NOTE: 从数据集 WORK.AE. 读取了 90 个观测
+      WHERE not MISSING(AETERM);
+NOTE: 数据集 WORK.AE_CHECK_TEMP 有 90 个观测和 10 个变量。
+NOTE: “DATA 语句”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+
+NOTE: 从数据集 WORK.AE_CHECK_TEMP. 读取了 2 个观测
+      WHERE MISSING(USUBJID) or MISSING(TRT01A) or MISSING(AETERM) or MISSING(AESTDTC);
+NOTE: 数据集 WORK.TEMP1_LACK 有 2 个观测和 10 个变量。
+NOTE: “DATA 语句”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+
+NOTE: 从数据集 WORK.AE. 读取了 96 个观测
+NOTE: 25 个具有重复键值的观测已删除。
+NOTE: 数据集 WORK.AE_TRT 有 71 个观测和 2 个变量。
+NOTE: “PROCEDURE SORT”所用时间（总处理时间）:
+      实际时间          0.01 秒
+      CPU 时间          0.01 秒
+      
+
+
+NOTE: 从数据集 WORK.DM. 读取了 70 个观测
+NOTE: 0 个具有重复键值的观测已删除。
+NOTE: 数据集 WORK.DM_TRT 有 70 个观测和 2 个变量。
+NOTE: “PROCEDURE SORT”所用时间（总处理时间）:
+      实际时间          0.01 秒
+      CPU 时间          0.01 秒
+      
+
+
+NOTE: 从数据集 WORK.AE_TRT. 读取了 71 个观测
+NOTE: 从数据集 WORK.DM_TRT. 读取了 70 个观测
+NOTE: 数据集 WORK.CHECK_TRT 有 72 个观测和 4 个变量。
+NOTE: “DATA 语句”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.01 秒
+      
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+============================================
+治疗组一致性检查结果
+--------------------------------------------
+总受试者数            :       71
+AE中有但DM中无        :        1
+DM中有但AE中无        :        0
+存在缺失              :        2
+治疗组不一致          :        1
+--------------------------------------------
+结论: 发现 4 条异常记录，请查看 check_trt 数据集
+-------------------------------------
+AE有完全重复数据,重复记录数为       1
+-------------------------------------
+DM无完全重复数据
+------------------------------------------
+USUBJID缺失数         :        1
+TRT01A缺失数          :        0
+AETERM缺失数          :        0
+AESTDTC缺失数         :        1
+------------------------------------------
+============================================
+
+NOTE: 从数据集 WORK.TEMP1_DUPS. 读取了 1 个观测
+NOTE: “PROCEDURE PRINT”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+
+NOTE: 数据集 WORK.TEMP2_DUPS 中没有观测。
+NOTE: “PROCEDURE PRINT”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+
+NOTE: 从数据集 WORK.TEMP1_LACK. 读取了 2 个观测
+NOTE: “PROCEDURE PRINT”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+4774  
+4775  *去重*;
+4776  %clean(data=ae,out=AE_CLEAN);
+
+NOTE: 从数据集 WORK.AE. 读取了 96 个观测
+NOTE: 1 个具有重复键值的观测已删除。
+NOTE: 数据集 WORK.CLEAN_TEMP1 有 95 个观测和 10 个变量。
+NOTE: “PROCEDURE SORT”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+
+NOTE: 从数据集 WORK.CLEAN_TEMP1. 读取了 94 个观测
+      WHERE MISSING(USUBJID)=0;
+NOTE: 数据集 WORK.CLEAN_TEMP2 有 94 个观测和 10 个变量。
+NOTE: “DATA 语句”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+
+NOTE: 缺失值的生成是对缺失值执行操作的结果。 
+      指定每个位置的方式: （次数）（行:列）。
+      1，位置: 3:10。   
+NOTE: 从数据集 WORK.CLEAN_TEMP2. 读取了 94 个观测
+NOTE: 数据集 WORK.AE_CLEAN 有 94 个观测和 13 个变量。
+NOTE: “DATA 语句”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.01 秒
+      
+
+4777  
+4778  *合并数据*;
+4779  %merge(data1=AE_CLEAN,data2=dm,out=AE_ADSL);
+
+NOTE: 从数据集 WORK.AE_CLEAN. 读取了 94 个观测
+NOTE: 从数据集 WORK.DM. 读取了 70 个观测
+NOTE: 数据集 WORK.AE_ADSL 有 95 个观测和 18 个变量。
+NOTE: “DATA 语句”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.01 秒
+      
+
+4780  
+4781  *汇总分析*;
+4782  %report1(dataSet=AE_ADSL,out=report1);
+NOTE: A CASE expression has no ELSE clause. Cases not accounted for by the WHEN clauses will result in a missing value for the 
+      CASE expression.
+NOTE: 表 WORK.REPORT1 创建完成，有 5 行，7 列。
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.02 秒
+      CPU 时间          0.03 秒
+      
+
+4783  %report2(dataSet=AE_ADSL,out=report2);
+NOTE: 表 WORK.TEMP_REPORT2 创建完成，有 5 行，2 列。
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.01 秒
+      
+
+NOTE: 表 WORK.REPORT2 创建完成，有 46 行，6 列。
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.03 秒
+      CPU 时间          0.03 秒
+      
+
+4784  %report3(dataSet=AE_ADSL,out=report3);
+NOTE: 表 WORK.TEMP_REPORT3 创建完成，有 5 行，2 列。
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.01 秒
+      
+
+NOTE: 表 WORK.REPORT3 创建完成，有 13 行，4 列。
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.02 秒
+      CPU 时间          0.03 秒
+      
+
+4785  *%TRT_report(trt=Drug A,odsfile='E:\sasdata\ae-safety-report\output')*;
+4786  *上述为根据治疗组输出报表的宏，可手动调用*;
+4787  
+4788  *根据治疗组循环生成报表*;
+4789  %loop;
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+NOTE: 正在生成报表：Drug A
+NOTE: 正在写入 RTF Body（主体）文件: /FINAL_REPORT_Drug A.rtf
+
+NOTE: 从数据集 WORK.REPORT1. 读取了 1 个观测
+      WHERE TRT01A='Drug A';
+NOTE: “PROCEDURE REPORT”所用时间（总处理时间）:
+      实际时间          0.02 秒
+      CPU 时间          0.01 秒
+      
+
+
+NOTE: 从数据集 WORK.REPORT2. 读取了 16 个观测
+      WHERE TRT01A='Drug A';
+NOTE: “PROCEDURE REPORT”所用时间（总处理时间）:
+      实际时间          0.02 秒
+      CPU 时间          0.01 秒
+      
+
+
+NOTE: 从数据集 WORK.REPORT3. 读取了 4 个观测
+      WHERE TRT01A='Drug A';
+NOTE: “PROCEDURE REPORT”所用时间（总处理时间）:
+      实际时间          0.01 秒
+      CPU 时间          0.01 秒
+      
+
+NOTE: 正在生成报表：Drug B
+NOTE: 正在写入 RTF Body（主体）文件: /FINAL_REPORT_Drug B.rtf
+
+NOTE: 从数据集 WORK.REPORT1. 读取了 1 个观测
+      WHERE TRT01A='Drug B';
+NOTE: “PROCEDURE REPORT”所用时间（总处理时间）:
+      实际时间          0.02 秒
+      CPU 时间          0.03 秒
+      
+
+
+NOTE: 从数据集 WORK.REPORT2. 读取了 16 个观测
+      WHERE TRT01A='Drug B';
+NOTE: “PROCEDURE REPORT”所用时间（总处理时间）:
+      实际时间          0.02 秒
+      CPU 时间          0.03 秒
+      
+
+
+NOTE: 从数据集 WORK.REPORT3. 读取了 4 个观测
+      WHERE TRT01A='Drug B';
+NOTE: “PROCEDURE REPORT”所用时间（总处理时间）:
+      实际时间          0.01 秒
+      CPU 时间          0.00 秒
+      
+
+NOTE: 正在生成报表：Placebo
+NOTE: 正在写入 RTF Body（主体）文件: /FINAL_REPORT_Placebo.rtf
+
+NOTE: 从数据集 WORK.REPORT1. 读取了 1 个观测
+      WHERE TRT01A='Placebo';
+NOTE: “PROCEDURE REPORT”所用时间（总处理时间）:
+      实际时间          0.02 秒
+      CPU 时间          0.01 秒
+      
+
+
+NOTE: 从数据集 WORK.REPORT2. 读取了 12 个观测
+      WHERE TRT01A='Placebo';
+NOTE: “PROCEDURE REPORT”所用时间（总处理时间）:
+      实际时间          0.02 秒
+      CPU 时间          0.03 秒
+      
+
+
+NOTE: 从数据集 WORK.REPORT3. 读取了 3 个观测
+      WHERE TRT01A='Placebo';
+NOTE: “PROCEDURE REPORT”所用时间（总处理时间）:
+      实际时间          0.01 秒
+      CPU 时间          0.01 秒
+      
+
+4790  
+4791  *卡方检验,如需要可调用*;
+4792  %chisq(dataset=AE_ADSL);
+NOTE: 表 WORK.CHISQ_AE 创建完成，有 75 行，3 列。
+
+NOTE: “PROCEDURE SQL”所用时间（总处理时间）:
+      实际时间          0.00 秒
+      CPU 时间          0.00 秒
+      
+
+
+NOTE: 从数据集 WORK.CHISQ_AE. 读取了 75 个观测
+NOTE: “PROCEDURE FREQ”所用时间（总处理时间）:
+      实际时间          0.03 秒
+      CPU 时间          0.03 秒
+      
+
+4793  
+4794  proc printto log=log;
+4795  run;
+

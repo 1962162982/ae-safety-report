@@ -1,0 +1,97 @@
+USUBJID,TRT01A,AETERM,AEDECOD,AEBODSYS,AESEV,AESER,AESTDTC,AEENDTC,AEREL
+S001,Drug A,Headache,Headache,Nervous system disorders,MILD,N,2024-01-03,2024-01-05,NOT RELATED
+S001,Drug A,Nausea,Nausea,Gastrointestinal disorders,MODERATE,N,2024-01-04,2024-01-08,POSSIBLY RELATED
+S001,Drug A,Headache,Headache,Nervous system disorders,MILD,N,2024-01-03,2024-01-05,NOT RELATED
+S002,Drug A,Rash,Rash,Skin and subcutaneous tissue disorders,MODERATE,N,2024-01-10,2024-01-15,POSSIBLY RELATED
+S003,Drug A,Alanine aminotransferase increased,Alanine aminotransferase increased,Investigations,SEVERE,Y,2024-01-12,2024-01-30,RELATED
+S004,Drug A,Headache,Headache,Nervous system disorders,MILD,N,2024-01-15,2024-01-17,NOT RELATED
+S004,Drug A,Dizziness,Dizziness,Nervous system disorders,MODERATE,N,2024-01-16,2024-01-20,POSSIBLY RELATED
+S004,Drug A,Fatigue,Fatigue,General disorders and administration site conditions,MILD,N,2024-01-18,2024-01-22,NOT RELATED
+S005,Drug A,Nausea,Nausea,Gastrointestinal disorders,MODERATE,N,2024-01-20,2024-01-25,POSSIBLY RELATED
+S005,Drug A,Diarrhoea,Diarrhoea,Gastrointestinal disorders,MILD,N,2024-01-22,2024-01-26,POSSIBLY RELATED
+S006,Drug A,,,,,,,,
+S007,Drug A,Insomnia,Insomnia,Psychiatric disorders,MILD,N,2024-02-01,2024-02-10,NOT RELATED
+S007,Drug A,Anxiety,Anxiety,Psychiatric disorders,MODERATE,N,2024-02-03,2024-02-12,POSSIBLY RELATED
+S008,Drug A,Rash,Rash,Skin and subcutaneous tissue disorders,MILD,N,2024-02-05,2024-02-08,POSSIBLY RELATED
+S008,Drug A,Pruritus,Pruritus,Skin and subcutaneous tissue disorders,MILD,N,2024-02-06,2024-02-09,POSSIBLY RELATED
+S009,Drug A,Headache,Headache,Nervous system disorders,MODERATE,N,2024-02-10,2024-02-13,NOT RELATED
+S010,Drug A,Pyresia,Pyresia,General disorders and administration site conditions,MILD,N,2024-02-12,2024-02-14,NOT RELATED
+S010,Drug A,Nausea,Nausea,Gastrointestinal disorders,MILD,N,2024-02-13,2024-02-17,POSSIBLY RELATED
+S011,Drug A,Nausea,Nausea,Gastrointestinal disorders,MILD,N,2024-02-15,2024-02-18,POSSIBLY RELATED
+S011,Drug A,Headache,Headache,Nervous system disorders,SEVERE,Y,2024-02-16,2024-02-22,RELATED
+S012,Drug A,Alanine aminotransferase increased,Alanine aminotransferase increased,Investigations,SEVERE,Y,2024-02-20,2024-03-15,RELATED
+S012,Drug A,Aspartate aminotransferase increased,Aspartate aminotransferase increased,Investigations,MODERATE,N,2024-02-20,2024-03-10,RELATED
+S013,Drug A,,,,,,,,
+S014,Drug A,Cough,Cough,Respiratory thoracic and mediastinal disorders,MILD,N,2024-03-01,2024-03-05,NOT RELATED
+S014,Drug A,Pyresia,Pyresia,General disorders and administration site conditions,MODERATE,N,2024-03-02,2024-03-06,POSSIBLY RELATED
+S015,Drug A,Nausea,Nausea,Gastrointestinal disorders,MODERATE,N,2024-03-03,2024-03-07,POSSIBLY RELATED
+S015,Drug A,Vomiting,Vomiting,Gastrointestinal disorders,MODERATE,N,2024-03-04,2024-03-06,POSSIBLY RELATED
+S016,Drug A,Back pain,Back pain,Musculoskeletal and connective tissue disorders,MILD,N,2024-03-08,2024-03-12,NOT RELATED
+S017,Drug A,Headache,Headache,Nervous system disorders,MILD,N,2024-03-10,2024-03-12,NOT RELATED
+S017,Drug A,Nausea,Nausea,Gastrointestinal disorders,MILD,N,2024-03-11,2024-03-14,POSSIBLY RELATED
+S018,Drug A,Dizziness,Dizziness,Nervous system disorders,MILD,N,2024-03-15,2024-03-18,NOT RELATED
+S019,Drug A,Rash,Rash,Skin and subcutaneous tissue disorders,MODERATE,N,2024-03-20,2024-03-25,POSSIBLY RELATED
+S020,Drug A,Fatigue,Fatigue,General disorders and administration site conditions,MILD,N,2024-03-22,2024-03-26,NOT RELATED
+S020,Drug A,Rash,Rash,Skin and subcutaneous tissue disorders,MILD,N,2024-03-24,,NOT RELATED
+S021,Drug A,Headache,Headache,Nervous system disorders,MODERATE,N,2024-03-25,2024-03-28,NOT RELATED
+S022,Drug A,Nausea,Nausea,Gastrointestinal disorders,MILD,N,,2024-03-30,POSSIBLY RELATED
+S022,Drug A,Headache,Headache,Nervous system disorders,MILD,N,2024-03-28,2024-03-31,NOT RELATED
+S023,Drug A,Rash,Rash,Skin and subcutaneous tissue disorders,MILD,N,2024-04-01,2024-04-04,POSSIBLY RELATED
+S024,Drug A,Alanine aminotransferase increased,Alanine aminotransferase increased,Investigations,SEVERE,Y,2024-04-02,2024-04-20,RELATED
+S024,Drug A,Pyresia,Pyresia,General disorders and administration site conditions,MODERATE,N,2024-04-05,2024-04-06,POSSIBLY RELATED
+S025,Drug A,Headache,Headache,Nervous system disorders,MILD,N,2024-04-08,2024-04-10,NOT RELATED
+S026,Drug B,Headache,Headache,Nervous system disorders,MILD,N,2024-01-05,2024-01-08,NOT RELATED
+S026,Drug B,Nausea,Nausea,Gastrointestinal disorders,MODERATE,N,2024-01-06,2024-01-10,POSSIBLY RELATED
+S026,Drug B,Fatigue,Fatigue,General disorders and administration site conditions,MILD,N,2024-01-08,2024-01-12,NOT RELATED
+S027,Drug B,Rash,Rash,Skin and subcutaneous tissue disorders,MILD,N,2024-01-10,2024-01-14,POSSIBLY RELATED
+S028,Drug B,Diarrhoea,Diarrhoea,Gastrointestinal disorders,MODERATE,N,2024-01-12,2024-01-16,POSSIBLY RELATED
+S029,Drug B,Alanine aminotransferase increased,Alanine aminotransferase increased,Investigations,SEVERE,Y,2024-01-15,2024-02-10,RELATED
+S030,Drug B,Headache,Headache,Nervous system disorders,MODERATE,N,2024-01-18,2024-01-21,NOT RELATED
+S030,Drug B,Dizziness,Dizziness,Nervous system disorders,MILD,N,2024-01-19,2024-01-22,NOT RELATED
+S031,Drug B,Nausea,Nausea,Gastrointestinal disorders,MILD,N,2024-01-22,2024-01-25,POSSIBLY RELATED
+S032,Drug B,Insomnia,Insomnia,Psychiatric disorders,MODERATE,N,2024-01-25,2024-02-05,POSSIBLY RELATED
+S033,Drug B,,,,,,,,
+S034,Drug B,Rash,Rash,Skin and subcutaneous tissue disorders,MILD,N,2024-02-01,2024-02-05,POSSIBLY RELATED
+S034,Drug B,Pruritus,Pruritus,Skin and subcutaneous tissue disorders,MILD,N,2024-02-02,2024-02-06,POSSIBLY RELATED
+S036,Drug B,Headache,Headache,Nervous system disorders,MILD,N,2024-02-05,2024-02-07,NOT RELATED
+S036,Drug B,Fatigue,Fatigue,General disorders and administration site conditions,MODERATE,,2024-02-08,2024-02-12,POSSIBLY RELATED
+S037,Drug B,Fatigue,Fatigue,General disorders and administration site conditions,MILD,N,2024-02-10,2024-02-14,NOT RELATED
+S038,Drug B,Nausea,Nausea,Gastrointestinal disorders,MODERATE,N,2024-02-12,2024-02-16,POSSIBLY RELATED
+S039,Drug B,Vomiting,Vomiting,Gastrointestinal disorders,MILD,N,2024-02-13,2024-02-15,POSSIBLY RELATED
+S040,Drug B,Alanine aminotransferase increased,Alanine aminotransferase increased,Investigations,MODERATE,N,2024-02-15,2024-03-05,RELATED
+S041,Drug B,Cough,Cough,Respiratory thoracic and mediastinal disorders,MILD,N,2024-02-20,2024-02-25,NOT RELATED
+S042,Drug B,Dyspnoea,Dyspnoea,Respiratory thoracic and mediastinal disorders,SEVERE,Y,2024-02-22,2024-03-01,RELATED
+S043,Drug B,Headache,Headache,Nervous system disorders,MILD,N,2024-02-25,2024-02-28,NOT RELATED
+S044,Drug B,Back pain,Back pain,Musculoskeletal and connective tissue disorders,MILD,N,2024-03-01,2024-03-05,NOT RELATED
+S044,Drug B,Arthralgia,Arthralgia,Musculoskeletal and connective tissue disorders,MODERATE,N,2024-03-03,2024-03-10,POSSIBLY RELATED
+S045,Placebo,Dizziness,Dizziness,Nervous system disorders,MILD,N,2024-03-05,2024-03-08,NOT RELATED
+S045,Placebo,Headache,Headache,Nervous system disorders,MILD,N,2024-03-06,2024-03-09,NOT RELATED
+S046,Drug B,,,,,,,,
+S047,Drug B,Rash,Rash,Skin and subcutaneous tissue disorders,MODERATE,N,2024-03-08,2024-03-14,POSSIBLY RELATED
+S048,Drug B,Anaemia,Anaemia,Blood and lymphatic system disorders,MODERATE,N,2024-03-10,2024-03-20,RELATED
+S049,Drug B,Fatigue,Fatigue,General disorders and administration site conditions,MILD,N,2024-03-12,2024-03-16,NOT RELATED
+S050,Drug B,Nausea,Nausea,Gastrointestinal disorders,MILD,N,2024-03-14,,POSSIBLY RELATED
+S051,Placebo,Headache,Headache,Nervous system disorders,MILD,N,2024-01-06,2024-01-08,NOT RELATED
+S052,Placebo,Rash,Rash,Skin and subcutaneous tissue disorders,MILD,N,2024-01-10,2024-01-13,NOT RELATED
+S053,Placebo,,,,,,,,
+S054,Placebo,Nausea,Nausea,Gastrointestinal disorders,MILD,N,2024-01-12,2024-01-15,NOT RELATED
+S055,Placebo,Headache,Headache,Nervous system disorders,MODERATE,N,2024-01-15,2024-01-18,NOT RELATED
+S055,Placebo,Fatigue,Fatigue,General disorders and administration site conditions,MILD,N,2024-01-16,2024-01-20,NOT RELATED
+S056,Placebo,Diarrhoea,Diarrhoea,Gastrointestinal disorders,MILD,N,2024-01-20,2024-01-23,NOT RELATED
+S057,Placebo,Insomnia,Insomnia,Psychiatric disorders,MILD,N,2024-01-25,2024-02-02,NOT RELATED
+S058,Placebo,Rash,Rash,Skin and subcutaneous tissue disorders,MILD,N,2024-02-01,2024-02-04,NOT RELATED
+S059,Placebo,Headache,Headache,Nervous system disorders,MILD,N,2024-02-05,2024-02-07,NOT RELATED
+S060,Placebo,Pyresia,Pyresia,General disorders and administration site conditions,MILD,N,2024-02-08,2024-02-10,NOT RELATED
+S061,Placebo,Nausea,Nausea,Gastrointestinal disorders,MILD,N,2024-02-12,2024-02-15,NOT RELATED
+S062,Placebo,Alanine aminotransferase increased,Alanine aminotransferase increased,Investigations,MODERATE,N,2024-02-15,2024-03-05,NOT RELATED
+S063,Placebo,Headache,Headache,Nervous system disorders,MILD,N,2024-02-18,2024-02-20,NOT RELATED
+S064,Placebo,Cough,Cough,Respiratory thoracic and mediastinal disorders,MILD,N,2024-02-20,2024-02-24,NOT RELATED
+S065,Placebo,Headache,Headache,Nervous system disorders,MODERATE,N,2024-02-22,2024-02-26,NOT RELATED
+S065,Placebo,Nausea,Nausea,Gastrointestinal disorders,MILD,N,2024-02-23,2024-02-26,NOT RELATED
+S066,Placebo,Back pain,Back pain,Musculoskeletal and connective tissue disorders,MILD,N,2024-03-01,2024-03-05,NOT RELATED
+S067,Placebo,Dizziness,Dizziness,Nervous system disorders,MILD,N,2024-03-05,,NOT RELATED
+S068,Placebo,Rash,Rash,Skin and subcutaneous tissue disorders,MILD,N,2024-03-08,2024-03-12,NOT RELATED
+S069,Placebo,Fatigue,Fatigue,General disorders and administration site conditions,MILD,N,2024-03-10,2024-03-14,NOT RELATED
+S070,Placebo,,,,,,,,
+S999,Drug C,Headache,Headache,Nervous system disorders,MILD,N,2024-03-15,2024-03-18,NOT RELATED
+,Drug B,Nausea,Nausea,Gastrointestinal disorders,MILD,N,2024-01-22,2024-01-25,POSSIBLY RELATED
